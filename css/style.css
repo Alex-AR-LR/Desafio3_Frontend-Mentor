@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+:root{
+    /* Primary */
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* Import fonts */
+
+@font-face {
+    font-family: Lexend Deca;
+    src: url(../fonts/LexendDeca-Regular.ttf);
+}
+
+@font-face {
+    font-family: Big Shoulders Display;
+    src: url(../fonts/BigShouldersDisplay-Bold.ttf);
+}
+
+.container{
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    padding: 2rem;
+}
+
+.card{
+    width: 290px;
+    padding: 2.8rem;
+}
+
+.card:first-child{
+    border-radius: 10px 10px 0 0;
+}
+
+.card:last-child{
+    border-radius: 0 0 10px 10px;
+}
+
+.card--orange{
+    background-color: var(--Bright-orange);
+}
+
+.card--cyan{
+    background-color: var(--Dark-cyan);
+}
+
+.card--dark-cyan{
+    background-color: var(--Very-dark-cyan);
+}
+
+.card__img{
+    width: 60px;
+    margin-bottom: 30px;
+}
+
+.card__title{
+    font-size: 2.2rem;
+    font-family: Big Shoulders Display;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: var(--Very-light-gray);
+}
+
+.card__paragraph{
+    font: .9rem/1.5rem Lexend Deca;
+    color: var(--Transparent-white);
+    margin-bottom: 25px;
+}
+
+.btn{
+    border: 2px solid var(--Very-light-gray);
+    background-color: var(--Very-light-gray);
+    padding: .8rem 2rem;
+    border-radius: 30px;
+    font: 1rem/normal Lexend Deca;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--Very-light-gray);
+    transition: all .3s ease-out;
+}
+
+
+.btn--orange{
+    color: var(--Bright-orange);
+}
+
+.btn--cyan{
+    color: var(--Dark-cyan);
+}
+
+.btn--dark-cyan{
+    color: var(--Very-dark-cyan);
+}
+
+
+
+/* Vies desktop */
+
+@media screen and (min-width:1440px){
+    .container{
+        grid-auto-flow: column;
+    }
+
+    .card:first-child{
+        border-radius: 10px 0 0 10px;
+    }
+    
+    .card:last-child{
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+
+
+
+
